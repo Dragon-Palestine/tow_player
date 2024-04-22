@@ -53,9 +53,9 @@ body {
 }
 @media (max-width: 850px) {
   .container {
-    width: 285px;
-    margin-top: 150px;
-    margin-left: 25px;
+    width: 330px;
+    margin: 150px auto;
+    margin-bottom: 100px;
   }
 }
 .container::after {
@@ -76,9 +76,15 @@ body {
   height: 91px;
   background-color: #ffffff3e;
   z-index: -1;
-  left: 94%;
-  top: -6%;
+  left: 92%;
+  top: -4%;
   border-radius: 31%;
+}
+@media (max-width: 850px) {
+  .container::before {
+    left: 77%;
+    top: -2%;
+  }
 }
 .container .left,
 .container .right {
@@ -218,14 +224,14 @@ body {
   height: 70px;
   background-color: #ffffff3e;
   z-index: -1;
-  bottom: 277%;
-  left: 107%;
+  bottom: 292%;
+  left: 84%;
   border-radius: 50%;
 }
 @media (max-width: 850px) {
   .container .left .current::after {
-    bottom: 273%;
-    left: 107%;
+    bottom: 272%;
+    left: 80%;
   }
 }
 .container .right .current::after {
