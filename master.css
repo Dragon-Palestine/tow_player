@@ -53,7 +53,7 @@ body {
 }
 @media (max-width: 850px) {
   .container {
-    width: 300px;
+    width: 285px;
     margin-top: 150px;
     margin-left: 25px;
   }
