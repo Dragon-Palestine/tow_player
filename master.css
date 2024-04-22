@@ -166,6 +166,14 @@ body {
   box-shadow: 0px 5px 20px 0px #3a22229c;
   z-index: 3;
 }
+@media (max-width: 850px) {
+  .container .left .points {
+    width: 60px;
+    height: 60px;
+    right: -30px;
+    top: 130px;
+  }
+}
 .container .left h2,
 .container .right h2 {
   margin-bottom: 20px;
@@ -183,12 +191,7 @@ body {
   color: var(--main-color);
   margin-bottom: 70px;
 }
-@media (max-width: 850px) {
-  .container .left .player-score,
-  .container .right .player-score {
-    margin-bottom: 30px;
-  }
-}
+
 .container .left .roll {
   bottom: 60px;
 }
@@ -221,7 +224,7 @@ body {
 }
 @media (max-width: 850px) {
   .container .left .current::after {
-    bottom: 248%;
+    bottom: 273%;
     left: 107%;
   }
 }
