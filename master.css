@@ -1,6 +1,7 @@
 body {
   background-image: linear-gradient(250deg, rgb(116, 17, 88), rgb(193, 26, 26));
   font-family: sans-serif;
+  background-size: cover;
 }
 * {
   margin: 0;
@@ -52,7 +53,9 @@ body {
 }
 @media (max-width: 850px) {
   .container {
-    width: 500px;
+    width: 300px;
+    margin-top: 150px;
+    margin-left: 25px;
   }
 }
 .container::after {
@@ -88,7 +91,7 @@ body {
 @media (max-width: 850px) {
   .container .left,
   .container .right {
-    padding: 70px 50px;
+    padding: 70px 0px;
     padding-bottom: 130px;
   }
 }
@@ -103,6 +106,12 @@ body {
   left: 66%;
   border-radius: 50%;
 }
+@media (max-width: 850px) {
+  .container .left::after {
+    bottom: 66%;
+    left: 8%;
+  }
+}
 .container .left::before {
   content: "";
   position: absolute;
@@ -111,7 +120,7 @@ body {
   background-color: #ffffff3e;
   z-index: -1;
   top: 76%;
-  left: 50%;
+  left: 28%;
 }
 
 .container .right::after {
@@ -161,12 +170,24 @@ body {
 .container .right h2 {
   margin-bottom: 20px;
 }
+@media (max-width: 850px) {
+  .container .left h2,
+  .container .right h2 {
+    margin-bottom: 0px;
+  }
+}
 .container .left .player-score,
 .container .right .player-score {
   font-size: 35px;
   font-weight: 900;
   color: var(--main-color);
   margin-bottom: 70px;
+}
+@media (max-width: 850px) {
+  .container .left .player-score,
+  .container .right .player-score {
+    margin-bottom: 30px;
+  }
 }
 .container .left .roll {
   bottom: 60px;
@@ -198,7 +219,12 @@ body {
   left: 107%;
   border-radius: 50%;
 }
-
+@media (max-width: 850px) {
+  .container .left .current::after {
+    bottom: 248%;
+    left: 107%;
+  }
+}
 .container .right .current::after {
   content: "";
   position: absolute;
@@ -221,6 +247,14 @@ body {
   left: -59%;
   border-radius: 40px;
 }
+@media (max-width: 850px) {
+  .container .right .current::before {
+    top: 128%;
+    left: 26%;
+    width: 30px;
+    height: 30px;
+  }
+}
 
 .container .left .current p:first-child,
 .container .right .current p:first-child {
@@ -237,4 +271,5 @@ body {
   font-size: 35px;
   font-weight: 600;
   color: #ffffffd6;
+  margin-bottom: 200px;
 }
