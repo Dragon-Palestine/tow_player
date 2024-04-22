@@ -1,0 +1,240 @@
+body {
+  background-image: linear-gradient(250deg, rgb(116, 17, 88), rgb(193, 26, 26));
+  font-family: sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgba(249, 5, 62, 0.795);
+}
+.button {
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 15px;
+  background-color: #ffffffd6;
+  position: absolute;
+  right: 0;
+  transform: translateX(50%);
+  border: none;
+  box-shadow: 0px 5px 20px 0px #3a22229c;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 2;
+}
+.button:hover {
+  background-color: white;
+  transition: 0.3s;
+}
+.active {
+  background-color: #c46e7e80;
+  border-radius: 10px;
+}
+.hidden {
+  display: none;
+}
+
+/* backdrop-filter: blur(10px); */
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 700px;
+  margin: 150px auto;
+  background-color: #c8576c54;
+  border-radius: 10px;
+  /* overflow: hidden; */
+  box-shadow: inset 0 0 4px 0px rgba(255, 255, 255, 0.31);
+  position: relative;
+  margin-bottom: 100px;
+}
+@media (max-width: 850px) {
+  .container {
+    width: 500px;
+  }
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  border-radius: 50%;
+  z-index: -1;
+  bottom: -25px;
+  right: -25px;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 91px;
+  height: 91px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  left: 94%;
+  top: -6%;
+  border-radius: 31%;
+}
+.container .left,
+.container .right {
+  width: 50%;
+  text-align: center;
+  padding: 70px;
+  position: relative;
+  border-radius: 10px;
+}
+@media (max-width: 850px) {
+  .container .left,
+  .container .right {
+    padding: 70px 50px;
+    padding-bottom: 130px;
+  }
+}
+.container .left::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  bottom: 50%;
+  left: 66%;
+  border-radius: 50%;
+}
+.container .left::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  top: 76%;
+  left: 50%;
+}
+
+.container .right::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  bottom: 73%;
+  left: 30%;
+  border-radius: 50%;
+}
+.container .right::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  top: -5%;
+  left: -106%;
+}
+.container .left .new-game {
+  top: 20px;
+}
+.animation {
+  animation: run 1s linear 0s infinite alternate both;
+}
+@keyframes run {
+  to {
+    top: 35px;
+  }
+}
+.container .left .points {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffffd6;
+  right: -40px;
+  top: 120px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px 0px #3a22229c;
+  z-index: 3;
+}
+.container .left h2,
+.container .right h2 {
+  margin-bottom: 20px;
+}
+.container .left .player-score,
+.container .right .player-score {
+  font-size: 35px;
+  font-weight: 900;
+  color: var(--main-color);
+  margin-bottom: 70px;
+}
+.container .left .roll {
+  bottom: 60px;
+}
+.container .left .hold {
+  bottom: 20px;
+}
+.container .left .current,
+.container .right .current {
+  width: 80%;
+  background-color: var(--main-color);
+  height: 100px;
+  padding: 20px 0;
+  margin: auto;
+  color: white;
+  border-radius: 10px;
+  box-shadow: inset 0 0 3px 2px #2928282c, 0 0 2px 0px rgb(255 255 255 / 23%);
+  position: relative;
+}
+
+.container .left .current::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  bottom: 277%;
+  left: 107%;
+  border-radius: 50%;
+}
+
+.container .right .current::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  bottom: 45%;
+  left: 6%;
+  border-radius: 50%;
+}
+.container .right .current::before {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: #ffffff3e;
+  z-index: -1;
+  top: 46%;
+  left: -59%;
+  border-radius: 40px;
+}
+
+.container .left .current p:first-child,
+.container .right .current p:first-child {
+  margin-bottom: 15px;
+}
+.container .left .current .current-score,
+.container .right .current .current-score {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.made {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #ffffffd6;
+}
